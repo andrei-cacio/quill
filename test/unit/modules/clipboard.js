@@ -72,7 +72,7 @@ describe('Clipboard', function() {
       expect(delta).toEqual(new Delta().insert('\u00a0\u00a01\u00a0\u00a0', { bold: true }));
     });
 
-    it('consecutive intentional whitespace2', function() {
+    it('consecutive intentional whitespace in Chrome', function() {
       let html = '<strong>&nbsp; &nbsp; 1 &nbsp; &nbsp;</strong>';
       let delta = this.clipboard.convert(html);
       expect(delta).toEqual(new Delta().insert('\u00a0 \u00a0 1 \u00a0 \u00a0', { bold: true }));
